@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTarea = new System.Windows.Forms.TextBox();
             this.dataTimeVencimiento = new System.Windows.Forms.DateTimePicker();
             this.cmbPrioridadTarea = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,14 +41,14 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtTarea
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(38, 74);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 40);
-            this.textBox1.TabIndex = 0;
+            this.txtTarea.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarea.Location = new System.Drawing.Point(38, 74);
+            this.txtTarea.Multiline = true;
+            this.txtTarea.Name = "txtTarea";
+            this.txtTarea.Size = new System.Drawing.Size(325, 40);
+            this.txtTarea.TabIndex = 0;
             // 
             // dataTimeVencimiento
             // 
@@ -153,6 +153,7 @@
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FrmTareas
             // 
@@ -169,7 +170,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbPrioridadTarea);
             this.Controls.Add(this.dataTimeVencimiento);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTarea);
             this.Name = "FrmTareas";
             this.Text = "Creación de tareas";
             this.ResumeLayout(false);
@@ -179,7 +180,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTarea;
         private System.Windows.Forms.DateTimePicker dataTimeVencimiento;
         private System.Windows.Forms.ComboBox cmbPrioridadTarea;
         private System.Windows.Forms.Label label1;

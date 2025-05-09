@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
+            this.cmbTareaUsuario = new System.Windows.Forms.ComboBox();
+            this.dgvPanelTareas = new System.Windows.Forms.DataGridView();
             this.lblPanel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.boxAsignacion = new System.Windows.Forms.GroupBox();
             this.boxFiltros = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbPrioridad = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbFiltroUsuario = new System.Windows.Forms.ComboBox();
+            this.cmbFiltroTarea = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPanelTareas)).BeginInit();
             this.boxAsignacion.SuspendLayout();
             this.boxFiltros.SuspendLayout();
             this.SuspendLayout();
@@ -58,31 +58,31 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(259, 28);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // comboBox1
+            // cmbUsuario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(339, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(306, 29);
-            this.comboBox1.TabIndex = 1;
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(339, 64);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(306, 29);
+            this.cmbUsuario.TabIndex = 1;
             // 
-            // comboBox2
+            // cmbTareaUsuario
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(50, 85);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(295, 24);
-            this.comboBox2.TabIndex = 2;
+            this.cmbTareaUsuario.FormattingEnabled = true;
+            this.cmbTareaUsuario.Location = new System.Drawing.Point(50, 85);
+            this.cmbTareaUsuario.Name = "cmbTareaUsuario";
+            this.cmbTareaUsuario.Size = new System.Drawing.Size(295, 24);
+            this.cmbTareaUsuario.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvPanelTareas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 452);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(838, 132);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvPanelTareas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPanelTareas.Location = new System.Drawing.Point(35, 452);
+            this.dgvPanelTareas.Name = "dgvPanelTareas";
+            this.dgvPanelTareas.RowHeadersWidth = 51;
+            this.dgvPanelTareas.RowTemplate.Height = 24;
+            this.dgvPanelTareas.Size = new System.Drawing.Size(838, 132);
+            this.dgvPanelTareas.TabIndex = 3;
             // 
             // lblPanel
             // 
@@ -123,12 +123,13 @@
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseMnemonic = false;
             this.btnAsignar.UseVisualStyleBackColor = false;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // boxAsignacion
             // 
             this.boxAsignacion.Controls.Add(this.btnAsignar);
             this.boxAsignacion.Controls.Add(this.label1);
-            this.boxAsignacion.Controls.Add(this.comboBox1);
+            this.boxAsignacion.Controls.Add(this.cmbUsuario);
             this.boxAsignacion.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxAsignacion.Location = new System.Drawing.Point(35, 21);
             this.boxAsignacion.Name = "boxAsignacion";
@@ -141,12 +142,12 @@
             // 
             this.boxFiltros.Controls.Add(this.button1);
             this.boxFiltros.Controls.Add(this.label6);
-            this.boxFiltros.Controls.Add(this.comboBox5);
+            this.boxFiltros.Controls.Add(this.cmbPrioridad);
             this.boxFiltros.Controls.Add(this.label5);
             this.boxFiltros.Controls.Add(this.label4);
             this.boxFiltros.Controls.Add(this.label3);
-            this.boxFiltros.Controls.Add(this.comboBox4);
-            this.boxFiltros.Controls.Add(this.comboBox3);
+            this.boxFiltros.Controls.Add(this.cmbFiltroUsuario);
+            this.boxFiltros.Controls.Add(this.cmbFiltroTarea);
             this.boxFiltros.Controls.Add(this.dateTimePicker1);
             this.boxFiltros.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxFiltros.Location = new System.Drawing.Point(35, 193);
@@ -155,66 +156,6 @@
             this.boxFiltros.TabIndex = 9;
             this.boxFiltros.TabStop = false;
             this.boxFiltros.Text = "Filtrar tareas";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(15, 60);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(255, 29);
-            this.comboBox3.TabIndex = 3;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(295, 65);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(255, 29);
-            this.comboBox4.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 21);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Tarea";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(291, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 21);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Usuario";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(573, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 21);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Fecha";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(15, 137);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(255, 29);
-            this.comboBox5.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Prioridad";
             // 
             // button1
             // 
@@ -227,6 +168,66 @@
             this.button1.UseMnemonic = false;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 107);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 21);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Prioridad";
+            // 
+            // cmbPrioridad
+            // 
+            this.cmbPrioridad.FormattingEnabled = true;
+            this.cmbPrioridad.Location = new System.Drawing.Point(15, 137);
+            this.cmbPrioridad.Name = "cmbPrioridad";
+            this.cmbPrioridad.Size = new System.Drawing.Size(255, 29);
+            this.cmbPrioridad.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(573, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 21);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Fecha";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(291, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 21);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Usuario";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 21);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Tarea";
+            // 
+            // cmbFiltroUsuario
+            // 
+            this.cmbFiltroUsuario.FormattingEnabled = true;
+            this.cmbFiltroUsuario.Location = new System.Drawing.Point(295, 65);
+            this.cmbFiltroUsuario.Name = "cmbFiltroUsuario";
+            this.cmbFiltroUsuario.Size = new System.Drawing.Size(255, 29);
+            this.cmbFiltroUsuario.TabIndex = 4;
+            // 
+            // cmbFiltroTarea
+            // 
+            this.cmbFiltroTarea.FormattingEnabled = true;
+            this.cmbFiltroTarea.Location = new System.Drawing.Point(15, 60);
+            this.cmbFiltroTarea.Name = "cmbFiltroTarea";
+            this.cmbFiltroTarea.Size = new System.Drawing.Size(255, 29);
+            this.cmbFiltroTarea.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,14 +235,14 @@
             this.ClientSize = new System.Drawing.Size(942, 641);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPanel);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.dgvPanelTareas);
+            this.Controls.Add(this.cmbTareaUsuario);
             this.Controls.Add(this.boxAsignacion);
             this.Controls.Add(this.boxFiltros);
             this.Name = "Form1";
             this.Text = "Panel de tareas";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPanelTareas)).EndInit();
             this.boxAsignacion.ResumeLayout(false);
             this.boxAsignacion.PerformLayout();
             this.boxFiltros.ResumeLayout(false);
@@ -254,9 +255,9 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbUsuario;
+        private System.Windows.Forms.ComboBox cmbTareaUsuario;
+        private System.Windows.Forms.DataGridView dgvPanelTareas;
         private System.Windows.Forms.Label lblPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -264,12 +265,12 @@
         private System.Windows.Forms.GroupBox boxAsignacion;
         private System.Windows.Forms.GroupBox boxFiltros;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbPrioridad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbFiltroUsuario;
+        private System.Windows.Forms.ComboBox cmbFiltroTarea;
         private System.Windows.Forms.Button button1;
     }
 }
