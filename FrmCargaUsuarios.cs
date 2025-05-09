@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace laboratorio3_gestion_tareas
 {
-    public partial class Form1 : Form
+    public partial class FrmCargaUsuarios : Form
     {
-        public Form1()
+        public FrmCargaUsuarios()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
