@@ -52,8 +52,32 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCargaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCargaUsuarios.Designer.cs">
+      <DependentUpon>FrmCargaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTareas.Designer.cs">
+      <DependentUpon>FrmTareas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tareas.cs" />
+    <Compile Include="TareasPorUsuario.cs" />
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCargaUsuarios.resx">
+      <DependentUpon>FrmCargaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTareas.resx">
+      <DependentUpon>FrmTareas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
